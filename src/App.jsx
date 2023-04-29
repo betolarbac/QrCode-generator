@@ -1,18 +1,16 @@
-import "./app.css"
+import { HeroPattern } from "./HeroPattern";
+import "./app.css";
 import { GetSearch } from "./components";
 
-
 function App() {
-
   return (
     <>
-    <GetSearch />
-
+      <main className="main">
+        <GetSearch />
+        <HeroPattern />
+      </main>
     </>
   );
 }
-
-
-
 
 export default App;

@@ -3,6 +3,21 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+
+  position: relative;
+  z-index: 10;
+}
+
+.main {
+  position: relative;
+  overflow-x: hidden;
+}
+
+#hero {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .searchContainer {
@@ -18,7 +33,7 @@
   background: #ffffff;
   padding: 10px 20px;
   border-radius: 26px;
-  max-width: 900px;;
+  max-width: 900px;
   outline: none;
   border: none;
   display: flex;
@@ -26,11 +41,11 @@
 }
 
 .input {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
-  line-height: 25px; 
+  line-height: 25px;
   width: 660px;
   height: 65px;
   color: rgba(0, 0, 0, 0.65);
@@ -48,10 +63,10 @@
 }
 
 .buttonSearch {
-  background: #824DF4;
+  background: #824df4;
   border-radius: 21px;
   border: none;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -77,20 +92,20 @@
 }
 
 .contentTitle h1 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 35px;
   line-height: 40px;
   text-transform: uppercase;
-  color: #824DF4;
+  color: white;
   text-align: center;
 }
 
 @media (max-width: 992px) {
   .input {
     font-size: 16px;
-    line-height: 20px; 
+    line-height: 20px;
     width: 200px;
     height: 50px;
   }
@@ -111,9 +126,7 @@
   }
 
   .contentTitle h1 {
-
     font-size: 25px;
     line-height: 30px;
-
   }
 }
