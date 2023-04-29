@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useState } from "react";
+
 
 export function GetSearch() {
   const [formValue, setFormValue] = useState("");
@@ -9,14 +9,8 @@ export function GetSearch() {
     event.preventDefault();
     const url = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${formValue}`;
 
-    const { data } = await axios.get(url);
-
     setQrCode(url);
-
-    return data;
   }
-
-  console.log(qrCode);
 
   return (
     <>
@@ -31,7 +25,8 @@ export function GetSearch() {
                 type="text"
                 value={formValue}
                 className="input"
-                placeholder="http:://..."
+                placeholder="http://..."
+                required
                 onChange={(e) => setFormValue(e.target.value)}
               />
               <button className="buttonSearch">Gerar QRCode</button>
@@ -39,7 +34,11 @@ export function GetSearch() {
           </div>
         </div>
 
-        <img src={qrCode} alt="" className={`img ${qrCode === "" ? "ImgNone" : ""}`} />
+        <img
+          src={qrCode}
+          alt=""
+          className={`img ${qrCode === "" ? "ImgNone" : ""}`}
+        />
       </div>
     </>
   );
