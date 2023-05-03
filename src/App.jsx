@@ -1,6 +1,6 @@
 import { HeroPattern } from "./HeroPattern";
 import "./app.css";
-import { GetSearch } from "./components";
+import { GetSearch } from "./components/generatorQR";
 
 function App() {
   return (
