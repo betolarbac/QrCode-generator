@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <main className="main">
-      <div>
+      <div className="header">
       <ButtonTab
         isActive={tab === 'QrCode'}
         onClick={() => selectTab('QrCode')}

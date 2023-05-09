@@ -8,7 +8,7 @@ export default function ButtonTab({ children, isActive, onClick }) {
     return <b>{children}</b>
   }
   return (
-    <button onClick={() => {
+    <button className="buttonTab" onClick={() => {
       onClick();
     }}>
       {children}
