@@ -1,6 +1,5 @@
 import { HeroPattern } from "./HeroPattern";
 import "./app.css";
-
 import { useState, useTransition } from 'react';
 import ButtonTab from "./components/tabButton";
 import { GetSearch } from "./components/generatorQR";
